@@ -1,73 +1,40 @@
-# sample-shopping
-<h1>Shopping Cart</h1>
-{if #cart.updateForm.errors}
-  <ul class="errors">
-  {loop items="#cart.updateForm.errors" value="error"}
-    <li>{#error.message}</li>
-  {/loop}
-  </ul>
-{/if}
-{#cart.updateForm.tag.open}
-  <a href="{#cart.urls.continueShopping}" class="continue-shopping">Continue Shopping</a>
-  <a href="{#cart.urls.checkout}" class="checkout-button">Checkout</a>
-  <table cellspacing="0" class="shopping-cart">
-    <thead>
-      <tr class="headings">
-        <th class="link">&nbsp;</td>
-        <th class="product">Item</td>
-        <th class="price">Price</td>
-        <th class="quantity">Quantity</td>
-        <th class="price">Total</td>
-      </tr>
-    </thead>
-    <tbody>
-    {loop items="#cart.products" value="product"}
-      <tr> 
-        <td class="link"><label>{#product.fields.remove.tag} remove</label></td>
-        <td class="product">
-          <div class="product-img"><a href="{#product.url}">{#product.primaryImages.thumb.tag}</a></div>
-          <div class="product-name">
-            <a href="{#product.url}">{#product.productName}</a>
-            {loop items="#product.options" value="option"}
-              <br />{#option.label}: {#option.value}
-            {/loop}
-          </div>
-        </td>
-        <td class="price">
-          {#product.currentPrice.value}{if #product.pricePerUnit exists && #product.pricePerUnit != "None"} / {#product.pricePerUnit}{/if}
-        </td>
-        <td class="quantity">
-          {#product.fields.quantity.tag}{#product.fields.partialQuantity.tag}
-        </td>
-        <td class="price">{#product.totalPrice.value}</td>
-      </tr>
-    {/loop} 
-    {if #cart.coupons}
-      <tr>
-        <td class="quantity-span" colspan="4">Subtotal</td>
-        <td class="price">{#cart.cartTotalBeforeDiscounts.value}</td>
-      </tr>
-      {loop items="#cart.coupons" value="coupon"}
-        <tr>
-          <td class="quantity-span" colspan="4">{#coupon.name} ({#coupon.code})</td>
-          <td class="price">-{#coupon.savingsValue}</td>
-        </tr>
-      {/loop}
-    {/if}
- 
-      <tr class="totals">
-        <td colspan="2"><input type="submit" name="submit" value="Update cart" /></td>
-        <td class="quantity-span" colspan="2">Total</td>
-        <td class="price">{#cart.cartTotal.value}</td>
-      </tr> 
-    </tbody>
-  </table>
-{#cart.updateForm.tag.close}
-{#cart.updateForm.tag.open}
-  <div class="coupon">
-    Have a coupon? {#cart.updateForm.fields.coupon.tag} <input type="submit" value="Apply" />
-  </div>
-{#cart.updateForm.tag.close}
-<div style="clear: both;"></div>
-<a href="{#cart.urls.continueShopping}" class="continue-shopping">Continue Shopping</a>
-<a href="{#cart.urls.checkout}" class="checkout-button">Checkout</a>
+# sample-shopping-cart
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Online grocert</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+<body>
+
+<h1>Store</h1>
+<p>A website created by me.</p>
+
+</body>
+</html>
+<div class="navbar">
+<a href="howto_google_maps.asp">Google Maps</a><br>
+<a href="howto_css_animate_buttons.asp">Animated Buttons</a><br>
+<a href="howto_css_modals.asp">Modal Boxes</a><br>
+<a href="howto_js_animate.asp">Animations</a><br>
+<a href="howto_css_dropdown.asp">Hover Dropdowns</a><br>
+<a href="howto_js_dropdown.asp">Click Dropdowns</a><br>
+<a href="howto_css_table_responsive.asp">Responsive Tables</a><br>
+</div>
+<div class="row">
+  <div class="side">...</div>
+  <div class="main">...</div>
+</div>
+<div class="cart">
+  <img src="jeans3.jpg" alt="Denim Jeans" style="width:100%">
+  <h1>Tailored Jeans</h1>
+  <p class="price">$19.99</p>
+  <p>Some text about the jeans..</p>
+  <p><button>Add to Cart</button></p>
+</div>
