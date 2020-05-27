@@ -28,29 +28,12 @@ body {
 <span class="input-group-text"><i class="fa fa-search" aria-hidden="true"></i></span>
 </div>
 </div>
-
-<div class="navbar">
-<a href="howto_google_maps.asp">Google Maps</a><br>
-<a href="howto_css_animate_buttons.asp">Animated Buttons</a><br>
-<a href="howto_css_modals.asp">Modal Boxes</a><br>
-<a href="howto_js_animate.asp">Animations</a><br>
-<a href="howto_css_dropdown.asp">Hover Dropdowns</a><br>
-<a href="howto_js_dropdown.asp">Click Dropdowns</a><br>
-<a href="howto_css_table_responsive.asp">Responsive Tables</a><br>
-</div>
 <div class="menu">
 <ul>
 <li><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i>cart</a></li>
 <li><a href="#">Sign up</a></li>
 <li><a href="#">Log in</a></li>
 </ul>
-</div>
-<div class="cart">
-  <img src="jeans3.jpg" alt="Denim Jeans" style="width:100%">
-  <h1>Tailored Jeans</h1>
-  <p class="price">$19.99</p>
-  <p>Some text about the jeans..</p>
-  <p><button>Add to Cart</button></p>
 </div>
 <section class="header">
 <div class="side menu">
@@ -83,6 +66,52 @@ body {
 <li>Salt</li>
 </ul>
 </li>
+</div>
+<div class="slider">
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+</section>
+
+<script>
+   function open-menu() 
+    {document.getElementById=("side-menu").style.display="block";
+     document.getElementById=("menu- btn").style.display="none";
+     document.getElementById=("close-btn").style.display="block";
+}
+function close-menu() 
+    {document.getElementById=("side-menu").style.display="none";
+     document.getElementById=("menu- btn").style.display="block";
+     document.getElementById=("close-btn").style.display="none";
+}
+</script>
+
+<div class="cart">
+  <img src="jeans3.jpg" alt="Denim Jeans" style="width:100%">
+  <h1>Tailored Jeans</h1>
+  <p class="price">$19.99</p>
+  <p>Some text about the jeans..</p>
+  <p><button>Add to Cart</button></p>
+</div>
 </body>
 </html>
 
