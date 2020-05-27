@@ -68,7 +68,7 @@ body {
 </li>
 </div>
 <div class="slider">
-<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+<div id="slider" class="carousel slide carousel-fade" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="..." class="d-block w-100" alt="Basket">
@@ -78,8 +78,13 @@ body {
     </div>
     <div class="carousel-item">
       <img src="..." class="d-block w-100" alt="Dry fruit">
-    </div>
+</div>
   </div>
+    <ol class="carousel-indicators">
+    <li data-target="#slider" data-slide-to="0" class="active"></li>
+    <li data-target="#slider" data-slide-to="1"></li>
+    <li data-target="#slider" data-slide-to="2"></li>
+  </ol>
 </div>
 </div>
 </section>
